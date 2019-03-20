@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stop: It's Giphy time</title>
+</head>
+
+<body>
+
+<div id="totoro"></div>
+  <img src="https://media1.giphy.com/media/unzR48isp6cCY/200_s.gif" data-still="https://media1.giphy.com/media/unzR48isp6cCY/200_s.gif" data-animate="https://media1.giphy.com/media/unzR48isp6cCY/200.gif" data-state="still" class="gif">
+  <img src="https://media2.giphy.com/media/11uBI1a2Jk2s6c/200_s.gif" data-still="https://media2.giphy.com/media/11uBI1a2Jk2s6c/200_s.gif" data-animate="https://media2.giphy.com/media/11uBI1a2Jk2s6c/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/yz9WIwUtfWg12/200_s.gif" data-still="https://media3.giphy.com/media/yz9WIwUtfWg12/200_s.gif" data-animate="https://media3.giphy.com/media/yz9WIwUtfWg12/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/eHQ5BsgBIBIGI/200_s.gif" data-still="https://media3.giphy.com/media/eHQ5BsgBIBIGI/200_s.gif" data-animate="https://media3.giphy.com/media/eHQ5BsgBIBIGI/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/4J9JbrcxxBUk/200_s.gif" data-still="https://media3.giphy.com/media/4J9JbrcxxBUk/200_s.gif" data-animate="https://media3.giphy.com/media/4J9JbrcxxBUk/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/pt0EKLDJmVvlS/200_s.gif" data-still="https://media3.giphy.com/media/pt0EKLDJmVvlS/200_s.gif" data-animate="https://media3.giphy.com/media/pt0EKLDJmVvlS/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/jsOU42Wmd7Vfy/200_s.gif" data-still="https://media3.giphy.com/media/jsOU42Wmd7Vfy/200_s.gif" data-animate="https://media3.giphy.com/media/jsOU42Wmd7Vfy/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/2pC8mTxAni8Io/200_s.gif" data-still="https://media3.giphy.com/media/2pC8mTxAni8Io/200_s.gif" data-animate="https://media3.giphy.com/media/2pC8mTxAni8Io/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/avtKRGfcj7Wk8/200_s.gif" data-still="https://media3.giphy.com/media/avtKRGfcj7Wk8/200_s.gif" data-animate="https://media3.giphy.com/media/avtKRGfcj7Wk8/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/tPzuDa62ovAI/200_s.gif" data-still="https://media3.giphy.com/media/tPzuDa62ovAI/200_s.gif" data-animate="https://media3.giphy.com/media/tPzuDa62ovAI/200.gif" data-state="still" class="gif">
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+
+
+
+
+
+  ////////////////on click stop and animate/////////////////
+    $(".gif").on("click", function() {
+      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+      var state = $(this).attr("data-state");
+      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+      // Then, set the image's data-state to animate
+      // Else set src to the data-still value
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
+  </script>
+</body>
+
+</html>
